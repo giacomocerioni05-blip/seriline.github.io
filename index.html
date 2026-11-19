@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seriline — Serigrafia, Stampa Digitale, Grafica e Ricamo a Urbino</title>
+  <meta name="description" content="Seriline: dal 1987 serigrafia, tampografia, stampa digitale, grafica e ricamo a Trasanni di Urbino (PU).">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADER: barre CMYK come una prova di stampa -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__bars">
+      <span style="--c: var(--cyan)"></span>
+      <span style="--c: var(--magenta)"></span>
+      <span style="--c: var(--yellow)"></span>
+      <span style="--c: var(--ink)"></span>
+    </div>
+    <div class="loader__label mono">Seriline · prova colore <span class="loader__pct">0</span>%</div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="Seriline, torna su">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+        <path d="M20 2v36M2 20h36" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>SERILINE</span>
+    </a>
+    <nav class="nav__links" aria-label="Principale">
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#laboratorio">Laboratorio</a>
+      <a href="#team">Team</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <a href="#contatti" class="btn btn--small nav__cta">Chiedi un preventivo</a>
+    <button class="nav__burger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#laboratorio">Laboratorio</a>
+    <a href="#team">Team</a>
+    <a href="#contatti">Contatti</a>
+    <div class="mobile-menu__foot mono">0722 322432 · seriline@gmail.com</div>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="crop crop--tl"></div><div class="crop crop--tr"></div>
+      <div class="crop crop--bl"></div><div class="crop crop--br"></div>
+
+      <div class="hero__inner">
+        <p class="hero__eyebrow mono reveal-up">Trasanni di Urbino · dal 1987</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Diamo</span></span>
+          <span class="line"><span class="rotator" aria-live="polite">
+            <em class="is-active" style="--c: var(--magenta)">colore</em>
+            <em style="--c: var(--cyan)">forma</em>
+            <em style="--c: var(--yellow)">luce</em>
+            <em style="--c: var(--magenta)">voce</em>
+          </span></span>
+          <span class="line"><span>alle tue idee.</span></span>
+        </h1>
+        <p class="hero__sub reveal-up">Serigrafia, tampografia, stampa digitale, grafica e ricamo. Su quasi ogni materiale, dal biglietto da visita all'insegna luminosa.</p>
+        <div class="hero__actions reveal-up">
+          <a href="#servizi" class="btn magnetic">Scopri cosa facciamo <span class="btn__arrow">→</span></a>
+          <a href="https://wa.me/393701486623" target="_blank" rel="noopener" class="btn btn--ghost magnetic">Scrivici su WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero__swatches mono" aria-hidden="true">
+        <span style="--c: var(--cyan)">C</span>
+        <span style="--c: var(--magenta)">M</span>
+        <span style="--c: var(--yellow)">Y</span>
+        <span style="--c: var(--ink)">K</span>
+      </div>
+      <a href="#chi-siamo" class="hero__scroll mono" aria-label="Scorri">scroll<span></span></a>
+    </section>
+
+    <!-- MARQUEE MATERIALI -->
+    <div class="marquee" aria-label="Materiali su cui stampiamo">
+      <div class="marquee__track">
+        <span>Tessuto</span><i>✦</i><span>Carta</span><i>✦</i><span>PVC</span><i>✦</i><span>Lamiera</span><i>✦</i>
+        <span>Alluminio anodizzato</span><i>✦</i><span>Vetro</span><i>✦</i><span>Ceramica</span><i>✦</i><span>Forex</span><i>✦</i>
+        <span>Dibond</span><i>✦</i><span>Lexan</span><i>✦</i><span>Banner</span><i>✦</i><span>Tela</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- CHI SIAMO -->
+    <section class="about section" id="chi-siamo">
+      <div class="container">
+        <div class="section__head">
+          <span class="tag mono reveal-up">01 — Chi siamo</span>
+          <h2 class="section__title split">Da una piccola bottega a un laboratorio completo.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal-up">
+            <p class="lead">Seriline nasce nel <strong>1987</strong> come serigrafia: insegne e materiale pubblicitario per aziende, negozi e privati.</p>
+            <p>Siamo partiti da una bottega piccola e stretta. Oggi lavoriamo in una sede moderna, con macchine serigrafiche automatiche e manuali che stampano su tessuto, carta, PVC, lamiera, alluminio anodizzato e quasi ogni altro materiale.</p>
+            <p>Negli anni abbiamo aggiunto la tampografia, un reparto di stampa digitale e il ricamo. Realizziamo e ripariamo anche telai serigrafici di qualsiasi misura.</p>
+          </div>
+
+          <div class="stats">
+            <div class="stat reveal-up" style="--c: var(--cyan)">
+              <div class="stat__num"><span class="count" data-to="39">0</span></div>
+              <div class="stat__label mono">anni di esperienza</div>
+            </div>
+            <div class="stat reveal-up" style="--c: var(--magenta)">
+              <div class="stat__num"><span class="count" data-to="4">0</span></div>
+              <div class="stat__label mono">reparti produttivi</div>
+            </div>
+            <div class="stat reveal-up" style="--c: var(--yellow)">
+              <div class="stat__num"><span class="count" data-to="12">0</span>+</div>
+              <div class="stat__label mono">materiali stampabili</div>
+            </div>
+            <div class="stat reveal-up" style="--c: var(--ink)">
+              <div class="stat__num"><span class="count" data-to="5">0</span></div>
+              <div class="stat__label mono">persone, un solo team</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <div class="timeline__line"><span></span></div>
+          <div class="timeline__item reveal-up">
+            <span class="timeline__year">1987</span>
+            <p>Apre la serigrafia: insegne e materiale pubblicitario.</p>
+          </div>
+          <div class="timeline__item reveal-up">
+            <span class="timeline__year">Tampografia</span>
+            <p>Penne, gadget, flaconi e vasetti in vetro per la cosmetica.</p>
+          </div>
+          <div class="timeline__item reveal-up">
+            <span class="timeline__year">Digitale</span>
+            <p>Arrivano plotter a solvente, plotter a pigmenti e stampa digitale.</p>
+          </div>
+          <div class="timeline__item reveal-up">
+            <span class="timeline__year">Oggi</span>
+            <p>Una sede moderna, con ricamo e grafica sotto lo stesso tetto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section class="services section section--dark" id="servizi">
+      <div class="container">
+        <div class="section__head">
+          <span class="tag mono reveal-up">02 — Servizi</span>
+          <h2 class="section__title split">Tutto quello che serve per farsi notare.</h2>
+        </div>
+
+        <div class="services__list">
+          <article class="service reveal-up" style="--c: var(--cyan)">
+            <div class="service__num mono">01</div>
+            <div class="service__body">
+              <h3>Grafica e stampa</h3>
+              <p>Dall'idea al prodotto finito, per l'ufficio, il negozio e la strada.</p>
+              <ul class="chips">
+                <li>Carta intestata</li><li>Biglietti da visita</li><li>Buste</li><li>DDT e fatture</li><li>Depliant</li><li>Volantini</li><li>Manifesti</li><li>Inviti</li><li>Adesivi</li><li>Vetrofanie</li><li>Carta da parati</li><li>Cartellonistica</li><li>Teloni in PVC</li><li>Insegne</li><li>Decorazione automezzi</li><li>Insegne luminose</li>
+              </ul>
+            </div>
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="12" y="8" width="40" height="48" rx="2"/><path d="M20 20h24M20 28h24M20 36h14"/></svg>
+            </div>
+          </article>
+
+          <article class="service reveal-up" style="--c: var(--magenta)">
+            <div class="service__num mono">02</div>
+            <div class="service__body">
+              <h3>Serigrafia e ricamo</h3>
+              <p>Abbigliamento personalizzato che dura nel tempo.</p>
+              <ul class="chips">
+                <li>Abiti da lavoro</li><li>Abbigliamento professionale</li><li>T-shirt promozionali</li><li>Taglie adulto e bambino</li><li>Cappellini</li>
+              </ul>
+            </div>
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M22 8l-14 8 6 12 6-3v31h24V25l6 3 6-12-14-8c-2 4-6 6-10 6s-8-2-10-6z"/></svg>
+            </div>
+          </article>
+
+          <article class="service reveal-up" style="--c: var(--yellow)">
+            <div class="service__num mono">03</div>
+            <div class="service__body">
+              <h3>Oggetti promozionali</h3>
+              <p>Forniamo e stampiamo gadget con il tuo marchio.</p>
+              <ul class="chips">
+                <li>Gadget aziendali</li><li>Calendari</li><li>Penne personalizzate</li><li>Timbri</li>
+              </ul>
+            </div>
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="22" width="44" height="32" rx="2"/><path d="M10 32h44M32 22v32M32 22c-4-10-16-10-14-2 1 3 8 2 14 2zM32 22c4-10 16-10 14-2-1 3-8 2-14 2z"/></svg>
+            </div>
+          </article>
+
+          <article class="service reveal-up" style="--c: var(--cyan)">
+            <div class="service__num mono">04</div>
+            <div class="service__body">
+              <h3>Decalcomanie su vetro e ceramica</h3>
+              <p>Personalizziamo gli oggetti di tutti i giorni.</p>
+              <ul class="chips">
+                <li>Tazzine da caffè</li><li>Piatti</li><li>Bicchieri</li>
+              </ul>
+            </div>
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 22h34v14a17 17 0 0 1-34 0z"/><path d="M46 26h4a6 6 0 0 1 0 12h-5"/><path d="M8 58h44"/></svg>
+            </div>
+          </article>
+
+          <article class="service reveal-up" style="--c: var(--magenta)">
+            <div class="service__num mono">05</div>
+            <div class="service__body">
+              <h3>Tampografia</h3>
+              <p>Stampa precisa anche su superfici curve e piccole.</p>
+              <ul class="chips">
+                <li>Vasetti e flaconi in vetro</li><li>Vasetti e flaconi in plastica</li><li>Cosmetica</li><li>Penne</li><li>Gadget</li>
+              </ul>
+            </div>
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M24 6h16v8H24zM22 14h20l4 10v32H18V24z"/><path d="M18 34h28M18 46h28"/></svg>
+            </div>
+          </article>
+        </div>
+        <p class="services__more mono reveal-up">…e tanto altro ancora. Chiedici pure.</p>
+      </div>
+    </section>
+
+    <!-- LABORATORIO: scroll orizzontale -->
+    <section class="lab" id="laboratorio">
+      <div class="lab__sticky">
+        <div class="lab__head container">
+          <span class="tag mono">03 — Laboratorio</span>
+          <h2 class="section__title">Le macchine dietro ogni stampa.</h2>
+          <div class="lab__controls">
+            <div class="lab__progress"><span></span></div>
+            <button class="lab__arrow" data-dir="-1" aria-label="Scheda precedente">←</button>
+            <button class="lab__arrow" data-dir="1" aria-label="Scheda successiva">→</button>
+          </div>
+        </div>
+        <div class="lab__track">
+          <article class="lab-card" style="--c: var(--cyan)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto A</span>
+            <h3>Serigrafia</h3>
+            <p>Macchine automatiche e manuali per tessuto, carta, PVC, lamiera, alluminio anodizzato e quasi ogni altro materiale. Realizziamo e ripariamo anche telai di qualsiasi misura.</p>
+          </article>
+          <article class="lab-card" style="--c: var(--magenta)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto B</span>
+            <h3>Tampografia</h3>
+            <p>Personalizziamo penne, gadget, flaconi in plastica e vasetti in vetro per la cosmetica.</p>
+          </article>
+          <article class="lab-card" style="--c: var(--yellow)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto C · Plotter a solvente</span>
+            <h3>Grande formato</h3>
+            <p>Stampa in quadricromia su adesivi, striscioni, cartellonistica, vetrofanie, lexan, tela, Dibond, Forex e pannelli in PVB.</p>
+          </article>
+          <article class="lab-card" style="--c: var(--cyan)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto C · Plotter a pigmenti</span>
+            <h3>Poster</h3>
+            <p>Manifesti di piccolo e grande formato, con colori brillanti e definiti.</p>
+          </article>
+          <article class="lab-card" style="--c: var(--magenta)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto C · Stampa digitale</span>
+            <h3>Piccole tirature</h3>
+            <p>Volantini, inviti, biglietti da visita, carta intestata e depliant in tirature piccole e medie.</p>
+          </article>
+          <article class="lab-card" style="--c: var(--yellow)">
+            <div class="lab-card__visual halftone"></div>
+            <span class="mono lab-card__k">Reparto D</span>
+            <h3>Ricamo</h3>
+            <p>Una macchina da ricamo dedicata all'abbigliamento: loghi e scritte che non sbiadiscono.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="process section">
+      <div class="container">
+        <div class="section__head">
+          <span class="tag mono reveal-up">04 — Come lavoriamo</span>
+          <h2 class="section__title split">Dall'idea alla consegna, in quattro passi.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal-up" style="--c: var(--cyan)"><span class="step__n">1</span><h3>Ascolto</h3><p>Ci racconti il progetto, in negozio, al telefono o su WhatsApp.</p></li>
+          <li class="step reveal-up" style="--c: var(--magenta)"><span class="step__n">2</span><h3>Grafica</h3><p>Prepariamo o sistemiamo il file e ti mostriamo una bozza.</p></li>
+          <li class="step reveal-up" style="--c: var(--yellow)"><span class="step__n">3</span><h3>Stampa</h3><p>Scegliamo la tecnica e il materiale più adatti, poi stampiamo.</p></li>
+          <li class="step reveal-up" style="--c: var(--ink)"><span class="step__n">4</span><h3>Consegna</h3><p>Controlliamo ogni pezzo e lo consegniamo pronto all'uso.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team section section--paper" id="team">
+      <div class="container">
+        <div class="section__head">
+          <span class="tag mono reveal-up">05 — Team</span>
+          <h2 class="section__title split">Le persone dietro l'inchiostro.</h2>
+        </div>
+        <div class="team__grid">
+          <article class="member reveal-up" style="--c: var(--cyan)">
+            <div class="member__avatar"><span>G</span></div>
+            <h3>Giancarlo</h3><p class="mono">Titolare</p>
+          </article>
+          <article class="member reveal-up" style="--c: var(--magenta)">
+            <div class="member__avatar"><span>L</span></div>
+            <h3>Liviana</h3><p class="mono">Titolare · Amministrazione</p>
+          </article>
+          <article class="member reveal-up" style="--c: var(--yellow)">
+            <div class="member__avatar"><span>A</span></div>
+            <h3>Andrea</h3><p class="mono">Grafico · Stampa digitale</p>
+          </article>
+          <article class="member reveal-up" style="--c: var(--cyan)">
+            <div class="member__avatar"><span>S</span></div>
+            <h3>Sara</h3><p class="mono">Serigrafia · Tampografia</p>
+          </article>
+          <article class="member reveal-up" style="--c: var(--magenta)">
+            <div class="member__avatar"><span>S</span></div>
+            <h3>Simone</h3><p class="mono">Serigrafia · Decalcomanie</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__marquee" aria-hidden="true">
+        <div class="cta__track"><span>Hai un progetto?</span><span>Hai un progetto?</span><span>Hai un progetto?</span><span>Hai un progetto?</span></div>
+      </div>
+      <div class="container cta__inner">
+        <p class="reveal-up">Raccontacelo. Ti rispondiamo con un preventivo chiaro e senza impegno.</p>
+        <a href="#contatti" class="btn btn--light magnetic reveal-up">Parliamone <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section class="contact section" id="contatti">
+      <div class="container">
+        <div class="section__head">
+          <span class="tag mono reveal-up">06 — Contatti</span>
+          <h2 class="section__title split">Passa a trovarci o scrivici.</h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <a class="info-row reveal-up" href="https://maps.google.com/?q=Via+San+Tommaso+37/H+61029+Trasanni+di+Urbino" target="_blank" rel="noopener">
+              <span class="mono">Indirizzo</span>
+              <strong>Via San Tommaso 37/H<br>61029 Trasanni di Urbino (PU)</strong>
+            </a>
+            <a class="info-row reveal-up" href="tel:+390722322432">
+              <span class="mono">Telefono</span>
+              <strong>(+39) 0722 322432</strong>
+            </a>
+            <a class="info-row reveal-up" href="mailto:seriline@gmail.com">
+              <span class="mono">Email</span>
+              <strong>seriline@gmail.com</strong>
+            </a>
+            <a class="info-row reveal-up" href="https://wa.me/393701486623" target="_blank" rel="noopener">
+              <span class="mono">WhatsApp</span>
+              <strong>+39 370 148 6623</strong>
+            </a>
+          </div>
+
+          <form class="form reveal-up" id="contact-form" novalidate>
+            <div class="field">
+              <input type="text" id="f-name" name="name" required placeholder=" ">
+              <label for="f-name">Nome e cognome</label>
+            </div>
+            <div class="field">
+              <input type="email" id="f-email" name="email" required placeholder=" ">
+              <label for="f-email">Email</label>
+            </div>
+            <div class="field">
+              <select id="f-service" name="service">
+                <option>Grafica e stampa</option>
+                <option>Serigrafia e ricamo</option>
+                <option>Oggetti promozionali</option>
+                <option>Decalcomanie su vetro e ceramica</option>
+                <option>Tampografia</option>
+                <option>Altro</option>
+              </select>
+              <label for="f-service" class="is-static">Servizio</label>
+            </div>
+            <div class="field">
+              <textarea id="f-msg" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="f-msg">Raccontaci il progetto</label>
+            </div>
+            <button type="submit" class="btn magnetic">Invia richiesta <span class="btn__arrow">→</span></button>
+            <p class="form__note mono">Si aprirà il tuo programma di posta con il messaggio già pronto.</p>
+          </form>
+        </div>
+
+        <div class="map reveal-up">
+          <iframe title="Mappa Seriline" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Via%20San%20Tommaso%2037%2FH%2C%2061029%20Trasanni%20di%20Urbino&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">SERILINE</div>
+      <div class="footer__cols">
+        <p class="mono">Serigrafia · Stampa digitale<br>Grafica · Ricamo</p>
+        <p class="mono">Via San Tommaso 37/H<br>61029 Trasanni di Urbino (PU)</p>
+        <p class="mono">© <span id="year"></span> Seriline<br><a href="#top">Torna su ↑</a></p>
+      </div>
+    </div>
+    <div class="footer__bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </footer>
+
+  <a href="https://wa.me/393701486623" class="wa-float" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
